@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #011936;
+  --color-navy-dark: #000f22;
+  --color-navy-light: #0d294d;
+  --color-gold: #EDB671;
+  --color-gold-hover: #f0c388;
+  --color-gold-dark: #b88640;
+  --color-cream: #F5F3EC;
+  --color-cream-card: #fdfcf9;
+  --color-ink: #06182E;
+  --color-ink-muted: #536477;
+  --font-manrope: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-inter);
+    color: var(--color-ink);
+    background-color: var(--color-cream);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-manrope);
+  }
+
+  /* 2px gold focus ring for keyboard accessibility */
+  :focus-visible {
+    outline: 2px solid #EDB671;
+    outline-offset: 2px;
+  }
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Hide scrollbar for clean UI in carousel/tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
